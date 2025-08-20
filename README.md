@@ -30,7 +30,7 @@ Campus safety is a critical concern for students, parents, and administrators. T
 
 Displays the initial greeting from the chatbot when a user opens the chat.
 
-![Welcome Message](../docs/screenshots/welcome_message.png)
+![Welcome Message](docs/screenshots/welcome_message.png)
 
 ---
 
@@ -38,7 +38,7 @@ Displays the initial greeting from the chatbot when a user opens the chat.
 
 Shows how an emergency report is submitted and acknowledged by the bot.
 
-![Emergency Report](../docs/screenshots/emergency_report.png)
+![Emergency Report](docs/screenshots/emergency_report.png)
 
 ---
 
@@ -46,7 +46,7 @@ Shows how an emergency report is submitted and acknowledged by the bot.
 
 Example of the bot providing safety-related information in response to a user query.
 
-![Safety Information](../docs/screenshots/safety_info.png)
+![Safety Information](docs/screenshots/safety_info.png)
 
 ---
 
@@ -54,6 +54,6 @@ Example of the bot providing safety-related information in response to a user qu
 
 Shows the default or FAQ response when the bot receives a general or unsupported question.
 
-![Default Message](../docs/screenshots/default_message.png)
+![Default Message](docs/screenshots/default_message.png)
 
 ---
