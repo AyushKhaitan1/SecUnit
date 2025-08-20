@@ -1,0 +1,187 @@
+body {
+    background: linear-gradient(135deg, #2d5be3 0%, #6dd5ed 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Center chatbot on laptop/desktop, full width on mobile */
+#chatbot-container {
+    position: relative;
+    margin: 48px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 40px rgba(44, 62, 80, 0.18);
+    width: 370px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: fadeIn 1s;
+    z-index: 999;
+}
+
+@media (max-width: 600px) {
+    #chatbot-container {
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        box-shadow: none;
+    }
+    #chatbot-header {
+        padding: 16px 0;
+        font-size: 1.1em;
+    }
+    #chatbot-messages {
+        min-height: 0;
+        max-height: calc(100vh - 130px);
+        padding: 10px;
+    }
+    #chatbot-input {
+        padding: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+#chatbot-header {
+    background: linear-gradient(90deg, #2d5be3 60%, #6dd5ed 100%);
+    color: #fff;
+    padding: 22px 0;
+    text-align: center;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+#chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f7fafd;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 400px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin-bottom: 8px;
+    animation: popIn 0.4s;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.95);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+.message.user {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.message.bot {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.message-content {
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+    word-break: break-word;
+    background: #e6eaf5;
+    color: #222;
+    border-bottom-left-radius: 6px;
+}
+
+.message.user .message-content {
+    background: linear-gradient(90deg, #2d5be3 60%, #6dd5ed 100%);
+    color: #fff;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 20px;
+}
+
+#chatbot-input {
+    display: flex;
+    border-top: 1px solid #e6eaf5;
+    background: #fff;
+    padding: 14px;
+    gap: 10px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px;
+    border: 1.5px solid #e6eaf5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#user-input:focus {
+    border: 1.5px solid #2d5be3;
+}
+
+#send-button {
+    background: linear-gradient(90deg, #2d5be3 60%, #6dd5ed 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 22px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+#send-button:hover {
+    background: linear-gradient(90deg, #1b3c8b 60%, #2d5be3 100%);
+    transform: scale(1.05);
+}
+
+/* Popup styling */
+#popup {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #222;
+    padding: 18px 32px;
+    border-radius: 16px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.18);
+    z-index: 2000;
+    border: 2px solid #2d5be3;
+    min-width: 280px;
+    max-width: 90vw;
+    text-align: center;
+    animation: fadeInPop 0.5s;
+}
+
+@keyframes fadeInPop {
+    from { opacity: 0; transform: translate(-50%, -20px);}
+    to { opacity: 1; transform: translate(-50%, 0);}
+}

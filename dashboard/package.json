@@ -1,0 +1,29 @@
+{
+  "name": "campus-safety-agent-dashboard",
+  "version": "1.0.0",
+  "description": "Admin dashboard for the AI-powered campus safety agent.",
+  "main": "src/App.jsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.27.1"
+  },
+  "keywords": [
+    "campus",
+    "safety",
+    "dashboard",
+    "react"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

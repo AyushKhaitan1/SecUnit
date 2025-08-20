@@ -1,0 +1,20 @@
+{
+  "name": "campus-safety-agent",
+  "version": "1.0.0",
+  "description": "AI-powered campus safety agent with a web-based chatbot for reporting emergencies and sending SOS alerts, an AI surveillance system, and an admin dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.0.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "author": "Ayush Khaitan",
+  "license": "ISC"
+}

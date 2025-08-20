@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CampusGuard Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <h2>CampusGuard Safety Agent</h2>
+        </div>
+        <div id="chatbot-messages" aria-live="polite"></div>
+        <div id="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off" aria-label="Type your message here">
+            <button id="send-button" aria-label="Send message">Send</button>
+        </div>
+    </div>
+    <div id="popup" role="alert"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
